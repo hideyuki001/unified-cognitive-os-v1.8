@@ -3,23 +3,23 @@
 
 AI systems are getting more powerful.
 
-But their decisions are still not reliable.
+But their decisions are still unstable.
 
-Not because they lack intelligence—  
-but because their judgment process is invisible.
+Not because they lack intelligence —  
+but because their **judgment process is invisible.**
 
 ---
 
 ## 🧠 The Problem
 
-Most AI failures are not due to lack of intelligence.
+Most AI failures are not caused by lack of intelligence.
 
-They come from breakdowns in the judgment process:
+They arise from breakdowns in judgment:
 
 - Ambiguous perception  
-- Mixed or conflicting interpretation  
+- Conflicting interpretation  
 - Untracked uncertainty  
-- Missing or non-reproducible decision trace  
+- Missing decision trace  
 
 ---
 
@@ -29,12 +29,12 @@ UCOS v1.8 introduces:
 
 👉 **Judgment Decomposition Layer**
 
-Every decision is decomposed into explicit, auditable components:
+Every decision is explicitly decomposed into:
 
-- Observation (What is actually perceived)  
-- Interpretation (Possible meanings)  
-- Uncertainty (What is not known)  
-- Decision Trace (Why this decision is made)  
+- **Observation** — what is actually perceived  
+- **Interpretation** — possible meanings  
+- **Uncertainty** — what is unknown or ambiguous  
+- **Decision Trace** — why the decision was made  
 
 ---
 
@@ -42,16 +42,16 @@ Every decision is decomposed into explicit, auditable components:
 
 - Explicit separation of perception, interpretation, and uncertainty  
 - Structured and auditable decision pipeline  
-- Reproducible and traceable decision outcomes  
-- Cross-domain applicability (ASR / Translation / AI Evaluation)  
+- Reproducible decision outcomes  
+- Cross-domain applicability (ASR / Translation / AI Evaluation)
 
 ---
 
 ## 🔁 Patch v1.8.1
 
-- Explicit detection of incomplete decision traces (`missing_gates`)  
-- Axis-specific escalation thresholds for uncertainty  
-- Governed fallback classification for undefined signals (`other:`)  
+- Detection of incomplete decision structures (`missing_gates`)  
+- Axis-based escalation triggers for uncertainty  
+- Fallback classification for undefined signals (`other:`)
 
 ---
 
@@ -68,15 +68,15 @@ Every decision is decomposed into explicit, auditable components:
 
 This is not about making AI smarter.
 
-👉 It is about making decisions stable.
+👉 It is about making decisions **stable.**
 
 ---
 
 ## 🧩 Why it matters
 
-Stable decisions are not created by better answers.
+Better answers do not create reliable systems.
 
-They are created by better judgment structure.
+👉 **Better judgment structures do.**
 
 UCOS provides that structure.
 
@@ -84,10 +84,9 @@ UCOS provides that structure.
 
 ## 📂 Full Specification
 
-See:
-
-- [UCO v1.8 Full Instructions](spec/UCO_v1.8_Full_Instructions.md)
+- [UCO v1.8 Full Instructions](spec/UCO_v1.8_Full_Instructions.md)  
 - [UCO v1.8.1 Patch](spec/UCO_v1.8.1_Patch.md)
+
 ---
 
 ## 📜 License
