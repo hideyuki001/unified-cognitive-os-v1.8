@@ -800,10 +800,3 @@ Decision is what was done about it.
 Once those are collapsed into one step, judgment becomes hard to debug,
 hard to reproduce, and unsafe to delegate—even when it sounds confident.
 ```
-
----
-
-**Status: v1.8 DESIGN COMPLETE**  
-**Integration Confidence: 93%**  
-**Philosophy Preserved: restraint-first, non-expansion, human authority**  
-**Next Implementation Priority: signal_class Kernel validation (OBS schema enforcement)**
