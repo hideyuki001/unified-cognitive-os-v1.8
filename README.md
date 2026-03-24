@@ -88,3 +88,9 @@ See:
 
 - `spec/UCO_v1.8_Full_Instructions.md`  
 - `spec/UCO_v1.8.1_Patch.md`
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
