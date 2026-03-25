@@ -64,6 +64,18 @@ Every decision is explicitly decomposed into:
 
 ---
 
+## 🧩 Examples
+
+This repository includes practical examples demonstrating how UCOS handles uncertainty across domains:
+
+- [Example 01 — ASR Uncertainty Preservation](./examples/example_01_asr_uncertainty_preservation.md)  
+- [Example 02 — Translation Ambiguity Control](./examples/example_02_translation_ambiguity.md)  
+- [Example 03 — LLM Hallucination Control](./examples/example_03_llm_hallucination_control.md)  
+
+👉 These examples show how UCOS prevents hallucination, preserves ambiguity, and enforces stable decision-making.
+
+---
+
 ## ⚠️ Philosophy
 
 This is not about making AI smarter.
@@ -72,13 +84,20 @@ This is not about making AI smarter.
 
 ---
 
-## 🧩 Why it matters
+## 🧠 Why it matters
 
 Better answers do not create reliable systems.
 
 👉 **Better judgment structures do.**
 
 UCOS provides that structure.
+
+---
+
+## 📂 Repository Structure
+
+- `/spec` — Full UCOS specification  
+- `/examples` — Practical ambiguity-handling cases  
 
 ---
 
