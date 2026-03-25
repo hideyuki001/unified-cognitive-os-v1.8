@@ -1,15 +1,18 @@
 # Example 03 — LLM Hallucination Control
 
 ## Context
-LLM (Large Language Model) tasked with answering a factual question.
+
+LLM (Large Language Model) tasked with answering a factual question.  
 The objective is to prevent hallucinated responses when knowledge is absent or uncertain.
 
 ## Input
+
 User query:
 
 "When was the XYZ Protocol signed?"
 
 ## Problem
+
 - The entity "XYZ Protocol" is not known or verifiable
 - LLMs tend to generate plausible but false answers
 - No evidence is available to support a factual response
@@ -18,29 +21,29 @@ User query:
 ## UCOS Breakdown
 
 ### OBS (Observation)
+
 - Query requests a factual historical event
 - No known reference to "XYZ Protocol" in reliable knowledge sources
 - No internal evidence supporting existence of the entity
 - Pattern resembles fabricated or undefined entity
 
----
-
 ### INT (Interpretation)
 
 #### Candidate Meanings
-1. A real but obscure protocol not in current knowledge  
-2. A misnamed or partially remembered real protocol  
-3. A non-existent or fictional entity  
+
+1. A real but obscure protocol not in current knowledge
+2. A misnamed or partially remembered real protocol
+3. A non-existent or fictional entity
 
 #### Selected Meaning
+
 - Unresolved (insufficient evidence to confirm any candidate)
 
 #### Selection Rationale
-- No candidate has verifiable support  
-- Ambiguity cannot be resolved through internal knowledge  
-- Forced selection would introduce hallucination  
 
----
+- No candidate has verifiable support
+- Ambiguity cannot be resolved through internal knowledge
+- Forced selection would introduce hallucination
 
 ### UNC (Uncertainty)
 
@@ -50,40 +53,34 @@ User query:
 - policy: 1 (risk of hallucination)
 
 #### Dominant Axis
+
 inferential
 
 #### Resolution Condition
+
 - External verification (trusted sources)
 - User-provided clarification
 - Retrieval-augmented evidence
 
----
-
 ### DTR (Decision Trace)
 
-1. OBS → entity not recognized in knowledge base  
-2. INT → multiple hypotheses without confirmation  
-3. UNC → inferential uncertainty exceeds safe answer threshold  
-4. Decision Gate → factual response blocked (STOP)  
-5. Action → defer answer and request clarification  
-6. Audit → hallucination prevented, uncertainty surfaced  
-
----
+1. OBS → entity not recognized in knowledge base
+2. INT → multiple hypotheses without confirmation
+3. UNC → inferential uncertainty exceeds safe answer threshold
+4. Decision Gate → factual response blocked (STOP)
+5. Action → defer answer and request clarification
+6. Audit → hallucination prevented, uncertainty surfaced
 
 ## Output
 
 "I cannot find reliable information about a 'XYZ Protocol.' It may be a misnamed or non-existent entity. Could you provide more context or clarify the reference?"
 
----
-
 ## Notes
 
-- No fabricated facts introduced  
-- Model refrains from answering beyond available evidence  
-- Uncertainty is explicitly communicated to the user  
-- Decision prioritizes safety over completeness  
-
----
+- No fabricated facts introduced
+- Model refrains from answering beyond available evidence
+- Uncertainty is explicitly communicated to the user
+- Decision prioritizes safety over completeness
 
 ## Key Insight
 
@@ -94,11 +91,9 @@ This example demonstrates how UCOS enforces:
 - Separation of knowledge absence from answer generation
 - Safe deferral under uncertainty
 
----
-
 ## Extended Insight (from real QA patterns)
 
-- Hallucination = forced completion under uncertainty  
-- "Answering anyway" is the primary failure mode  
-- Correct behavior is **structured refusal or deferral**  
-- Reliability requires gating, not generation  
+- Hallucination = forced completion under uncertainty
+- "Answering anyway" is the primary failure mode
+- Correct behavior is structured refusal or deferral
+- Reliability requires gating, not generation
